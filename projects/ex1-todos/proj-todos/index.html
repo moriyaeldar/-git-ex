@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo MVC</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="onInit()">
+    <h1>Todo MVC</h1>
+
+    <section class="todo-filter">
+        <h3>Filter Todos</h3>
+        <select onchange="onSetFilter(this.value)">
+            <option value="all">All</option>
+            <option value="active">Active</option>
+            <option value="done">Done</option>
+            <option value="txt">Txt</option>
+            <option value="created">Created</option>
+            <option value="importance">Importance</option>
+        </select>
+    </section>
+
+    <ul class="todo-list">
+    </ul>
+
+    <input name="newTodoTxt" type="text" placeholder="What need to be done" />
+    <button onclick="onAddTodo()">Add</button>
+    <p>Priorities level</p>
+    <select class="level" onchange="onSetImporteceLevel()">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+
+    <section class="todo-stat">
+        Total todos:
+        <span class="total-count"></span> Active:
+        <span class="active-count"></span>
+    </section>
+
+    <script src="js/services/storage.service.js"></script>
+    <script src="js/services/todo.service.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

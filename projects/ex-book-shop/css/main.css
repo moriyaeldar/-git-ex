@@ -1,0 +1,43 @@
+* {
+    background-color: rgb(184, 212, 218);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: rgb(71, 34, 59);
+    font-size: 35px;
+    padding: 5px;
+}
+
+table {
+    padding: 10px;
+}
+
+td {
+    border-style: solid;
+    background-color: rgb(185, 170, 170);
+}
+
+tr {
+    border-style: solid;
+    background-color: rgb(175, 170, 170);
+}
+
+th {
+    color: rgb(9, 43, 51);
+    border-style: solid;
+    background-color: rgb(223, 207, 182);
+}
+
+.modal {
+    background-color: rgb(129, 143, 156);
+    color: rgb(56, 52, 48);
+}

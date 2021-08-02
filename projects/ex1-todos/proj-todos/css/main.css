@@ -1,0 +1,32 @@
+body {
+    text-align: center;
+    background-color: lightblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.todo-filter {
+    background-color: rgb(37, 100, 100);
+    padding: 10px;
+}
+
+.todo-stat {
+    background-color: lightcyan;
+    padding: 10px;
+    margin: 10px;
+}
+
+.todo-stat span {
+    font-weight: bold;
+}
+
+h1 {
+    color: darkslategray;
+}
+
+h3 {
+    color: aliceblue;
+}
