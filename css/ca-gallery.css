@@ -391,6 +391,8 @@ header.masthead .intro-text .intro-heading {
 
 .portfolio-modal .modal-content img {
     margin-bottom: 30px;
+    max-width: 100vh;
+    max-height: fit-content;
 }
 
 .portfolio-modal .modal-content button {
@@ -867,4 +869,10 @@ fieldset[disabled] .btn-xl:hover {
 .container {
     padding-right: 0;
     padding-left: 0;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover;
 }

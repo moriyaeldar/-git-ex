@@ -2,9 +2,7 @@
 
 $(document).ready(init);
 $('.btn btn-primary').click(openContactLink);
-$(document).ready(function() {
-    new WOW().init();
-});
+
 
 function init() {
     creatProjects()
@@ -14,12 +12,10 @@ function init() {
 renderProjs()
 
 function renderProjs() {
-    var projId;
     var projects = creatProjects()
     var strHtml = projects.map(function(project) {
-        projId = project.id
         return ` <div class="col-md-4 col-sm-6 portfolio-item">
-   <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+   <a class="portfolio-link" data-toggle="modal" onclick="renderModal('${project.id}')"href="#portfolioModal1">
 <div class="portfolio-hover">
     <div class="portfolio-hover-content">
         <i class="fa fa-plus fa-3x"></i>
@@ -35,9 +31,6 @@ function renderProjs() {
     })
 
     $('.projects-gallery').html(strHtml)
-    $('#portfolioModal1').click(renderModal(projId));
-
-
 }
 
 function renderModal(projId) {
@@ -59,7 +52,9 @@ function renderModal(projId) {
                         <p>${project.desc}</p>
                         <ul class="list-inline">
                             <li>Date: ${project.publishedAt}</li>
-                    
+                        </ul>
+                        <ul>
+                        <a href="${project.url}">לפרוייקט המלא לחץ</a>
                         </ul>
                         <button class="btn btn-primary" data-dismiss="modal" type="button">
             <i class="fa fa-times"></i>
@@ -74,5 +69,10 @@ function renderModal(projId) {
 }
 
 function openContactLink() {
-    window.location('https://mail.google.com/mail/?view=cm&fs=1&to=me@example.com&su=SUBJECT&body=BODY&bcc=someone.else@example.com')
+    var mail = $('#email').val();
+    var subject = $('#subject').val();
+    var msgBody = $('#msg-body').val();
+    window.open('https://mail.google.com/mail/?view=cm&fs=1&to=me@example.com&su=SUBJECT&body=BODY&bcc=someone.else@example.com'
+        (mail, subject, msgBody), "_blank");
+
 }
